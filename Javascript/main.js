@@ -1,25 +1,25 @@
 import {print, newLine} from './Utils/print.mjs';
-// import {Game} from './game.js';
-// import {Level} from './level.mjs';
+import {Game} from './game.js';
+import {Level} from './level.mjs';
 
-// var game = new Game(
-//     [new Level()]
-// );
-//game.startLevel(0);
+var game = new Game(
+    [new Level()]
+);
+game.startLevel(0);
 
 print("TEST");
 
 
-import {Screen} from './screen.js';
+// import {Screen} from './screen.js';
 
 
-var screen = new Screen();
+// var screen = new Screen();
 
 // print(screen.constructor.name)
 
-screen.init();
+// screen.init();
 
-screen.run();
+// screen.run();
 
 // print("sfdghjkl;");
 
