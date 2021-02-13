@@ -4,7 +4,7 @@ import {print, newLine} from './Utils/print.mjs';
 import {Base, Vector} from './Utils/index.mjs';
 import {Circle, Line} from './Shapes/index.mjs'
 import {Character} from './Character/character.mjs';
-//import {mouseDown, mouseMove, mouseUp, keyDown, keyUp} from './EventHandlers/index.mjs';
+import {mouseDown, mouseMove, mouseUp, keyDown, keyUp} from './EventHandlers/index.mjs';
 
 export class Level extends Base {
 
