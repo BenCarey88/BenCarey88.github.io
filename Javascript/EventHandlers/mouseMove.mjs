@@ -1,7 +1,8 @@
 //functions to apply on mouse move event
 
 import {print, newLine} from '../Utils/print.mjs';
-import {Vector, Line} from '../Utils/index.mjs';
+import {Vector} from '../Utils/index.mjs';
+import {Line} from '../Shapes/index.mjs';
 
 import {isInside, isPointInside} from '../Movement/collisionDetection.mjs';
 
