@@ -4,7 +4,6 @@ import {print, newLine} from './Utils/print.mjs';
 import {Base, Vector} from './Utils/index.mjs';
 import {Circle, Line} from './Shapes/index.mjs'
 import {Character} from './Character/character.mjs';
-import {moveCharacter} from './Movement/index.mjs';
 import {mouseDown, mouseMove, mouseUp, keyDown, keyUp} from './EventHandlers/index.mjs';
 
 export class Level extends Base {
@@ -22,7 +21,7 @@ export class Level extends Base {
         this.clicked = false;
 
         this.character = new Character(
-            new Circle(new Vector(50, 50), 5),
+            new Circle(new Vector(50, 50), 50),
         );
 
         var topLeft = new Vector(0, 0);
@@ -57,7 +56,7 @@ export class Level extends Base {
 
     // game movement
     movement() {
-        moveCharacter(this);
+        this.character.move(this.lines);
     }
 
     //begin level
@@ -84,7 +83,10 @@ export class Level extends Base {
     // display level
     display() {
         this.ctx.clearRect(0, 0, this.width, this.height);
-        this.character.display();
+        this.character.draw(this.ctx);
+        for (var line of this.lines) {
+            line.draw(this.ctx);
+        }
     }
 
 }

@@ -1,5 +1,5 @@
 import {print, newLine} from './Utils/print.mjs';
-import {Game} from './game.js';
+import {Game} from './game.mjs';
 import {Level} from './level.mjs';
 
 var game = new Game(
